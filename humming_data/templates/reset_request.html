@@ -1,0 +1,28 @@
+{% extends 'layouts.html' %}
+
+{% block contentLog %}
+<div class="container w-50">
+    <form method="POST" action="">
+        {{form.hidden_tag()}}
+        <fieldset>
+        <br>
+        <legend class="border-bottom mb-4">{{ legend }}</legend>
+        <div class="form-group">
+            {{ form.email.label(class="form-control-label") }}
+            {% if form.email.errors %}
+                {{ form.email(class="form-control form-control-lg is-invalid") }}
+                {% for error in form.email.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            {% else %}
+                {{ form.email(class="form-control form-control-lg") }}
+            {% endif %}
+        </div>
+        </fieldset>
+        <br>
+        <div class="field-group">
+            {{ form.submit(class="btn btn-primary btn-online-info") }}
+        </div>
+    </form>
+</div>
+{% endblock contentLog %}

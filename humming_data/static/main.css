@@ -1,0 +1,179 @@
+.contentHomeA .card-body {
+    background: #dddddd;
+}
+
+canvas {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#buttons button {
+    font-size: 1rem;
+    padding: 1rem;
+    width: calc(50% - 0.25rem);
+}
+
+button {
+    font-size: 1rem;
+    background: #0088cc;
+    text-align: center;
+    color: black;
+    border: none;
+    transition: all 0.2s;
+    padding: 0.5rem;
+}
+
+button:hover, button:focus {
+    box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 1);
+    background: #00aaee;
+}
+
+button:active {
+    box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transform: translateY(2px);
+}
+
+.sound-clips {
+    flex: 1;
+    overflow: auto;
+}
+
+section, article {
+    display: block;
+}
+
+audio {
+    width: 100%;
+    display: block;
+    margin: 1rem auto 0.5rem;
+}
+
+.clip p {
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.clip button {
+    font-size: 1rem;
+    float: right;
+}
+
+button.delete {
+    background: #fa8072;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+}
+
+button.submit {
+    background: #90ee90;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+}
+
+.progress-display {
+    color: red;
+    font-size: 3em;
+    text-align: center;
+}
+
+.info-display {
+    color: green;
+    font-size: 1em;
+}
+
+.music-select-container {
+    display: flex;
+}
+
+#music-name-select,
+#music-segment-select {
+    display: inline-block;
+    width: 25%;
+    margin-right: 10px;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+label {
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    vertical-align: middle;
+}
+
+#music-name {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
+
+#music-total-count {
+    font-size: 22px;
+    color: black;
+}
+
+#music-folders {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#music-folders li {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    min-width: 150px;
+    height: 150px;
+    box-sizing: border-box;
+    line-height: 1.5;
+    border: none;
+}
+
+#music-folders li a {
+    display: block;
+    margin-top: 10px;
+    right: 13px;
+    position: relative;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#music-folders li::before {
+    content: "";
+    position: absolute;
+    top: -45px;
+    left: 0;
+    width: 120px;
+    height: 120px;
+    background-image: url("../static/folder-icon.png");
+    background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+    #music-folders li {
+        min-width: 100px;
+        height: 100px;
+    }
+}

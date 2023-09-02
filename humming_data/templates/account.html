@@ -1,0 +1,55 @@
+{% extends 'layouts.html' %}
+
+{% block contentAccount %}
+<br>
+<div class="container w-100">
+    <legend class="border-bottom mb-4">{{ legend }}</legend>
+</div>
+
+<div class="container w-200">
+    <section class="top-display">
+        <div class="directions">
+            <h5>Press <strong>Record</strong> to start recording, and press <strong>Stop</strong> to stop recording. You can select one piece of music segment from the following list for a listening trial. The music segment will be automatically played when you click the <strong>Record</strong> button (There will be a 3s countdown as your preparation time). Remember to stop the music playing at the top before recording start.</h5>
+            <br>
+            <form id="music-search-form">
+                <label for="music-search-input">Search Music Name:</label>
+                <input type="text" id="music-search-input" placeholder="input music name here">
+                <button id="music-search-button">Search</button>
+            </form>
+            <br>
+            <div class="music-select-container">
+                <label for="music-name-select">Music Name:</label>
+                <select id="music-name-select"></select>
+                <label for="music-segment-select">Segment Name:</label>
+                <select id="music-segment-select"></select>
+            </div>
+            <br>
+            <div id="music-name"></div>
+            <audio controls id="music-player"></audio>
+            <!-- <embed id="pdf-embed" width="100%" height="400px" type="application/pdf"> -->
+            <!-- <object id="pdf-embed" type="application/pdf" width="100%" height="400px"></object> -->
+            <div id="pdf-container"></div>
+        </div>
+    </section>
+
+    <br>
+    <div class="progress-display"></div>
+    <div class="info-display"></div>
+    <section class="main-controls">
+        <canvas class="visualizer"></canvas>
+        <div id="buttons">
+            <button class="record">Record</button>
+            <button class="stop">Stop</button>
+        </div>
+    </section>
+
+    <br>
+    <section class="sound-clips">
+    </section>
+</div>
+
+<script src="{{ url_for('static', filename='main.js') }}"></script>
+<script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+{% endblock contentAccount %}

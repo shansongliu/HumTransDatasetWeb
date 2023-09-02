@@ -1,0 +1,61 @@
+#music-total-count {
+    font-size: 22px;
+    color: black;
+}
+
+#music-folders {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#music-folders li {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    min-width: 150px;
+    height: 150px;
+    box-sizing: border-box;
+    line-height: 1.5;
+    border: none;
+}
+
+#music-folders li a {
+    display: block;
+    margin-top: 10px;
+    right: 13px;
+    position: relative;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#music-folders li::before {
+    content: "";
+    position: absolute;
+    top: -45px;
+    left: 0;
+    width: 120px;
+    height: 120px;
+    background-image: url("../static/folder-icon.png");
+    background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+    #music-folders li {
+        min-width: 100px;
+        height: 100px;
+    }
+}

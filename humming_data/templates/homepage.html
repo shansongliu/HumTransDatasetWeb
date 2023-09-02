@@ -1,0 +1,27 @@
+{% extends 'layouts.html' %}
+
+{% block contentHomeA %}
+<div class="contentHomeA">
+    <div class="card text-center">
+        <div class="card-body">
+            <br>
+            <h2 class="card-title">This is a website for recording humming data for humming melody transcription</h2>
+            <br>
+            <a href="{{ url_for('register') }}" class="btn btn-primary">Sign Up here!</a>
+        </div>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='main.js') }}"></script>
+{% endblock contentHomeA %}
+
+{% block contentHomeB %}
+<div class="card text-center">
+    <div class="card-body">
+        <br><br><br>
+        <h2 class="card-title">Recording Tutorial</h2>
+        <p style="font-size: 20px;">Below is a tutorial video about how to use this website to record humming data.</p>
+        <video src="../static/sound/tutorial.mp4" width="960" height="640" controls></video>
+    </div>
+</div>
+{% endblock contentHomeB %}

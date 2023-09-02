@@ -1,0 +1,18 @@
+{% extends 'layouts.html' %}
+
+{% block contentStatus %}
+<br>
+<div class="container w-100">
+    <legend class="border-bottom mb-4">{{ legend }}</legend>
+</div>
+
+<div class="container w-200">
+    <section class="saved-sound-clips">
+    </section>          
+</div>
+
+<script>
+    var username = '{{ username }}';
+</script>
+<script src="{{ url_for('static', filename='display.js') }}"></script>
+{% endblock contentStatus %}

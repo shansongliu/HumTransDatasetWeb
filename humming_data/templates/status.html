@@ -1,0 +1,22 @@
+{% extends 'layouts.html' %}
+
+{% block contentStatus %}
+<br>
+<div class="container w-100">
+    <legend class="border-bottom mb-4">{{ legend }}</legend>
+</div>
+
+<div class="container w-200">
+    <section class="status-display">
+        <div id="music-total-count"></div>
+        <br><br>
+        <ul id="music-folders"></ul>
+    </section>            
+</div>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='status.css') }}">
+<script>
+    var username = '{{ username }}';
+</script>
+<script src="{{ url_for('static', filename='status.js') }}"></script>
+{% endblock contentStatus %}
